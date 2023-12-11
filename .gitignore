@@ -1,0 +1,8 @@
+__pycache__
+certificate
+data/user_creds/*.json
+temp/*
+!temp/empty
+output.wav
+.env
+credentials.json

@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "VoiceCalendarBot"
+version = "0.1.0"
+description = ""
+authors = ["RudenkoAD <rudenko.ad@phystech.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+google-api-python-client = "^2.110.0"
+google-auth-httplib2 = "^0.1.1"
+google-auth-oauthlib = "^1.1.0"
+openai = "^1.3.8"
+python-telegram-bot = {extras = ["job-queue"], version = "^20.7"}
+flask = "^3.0.0"
+python-dotenv = "^1.0.0"
+cryptography = "^41.0.7"
+gunicorn = "^21.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.27.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

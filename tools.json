@@ -1,0 +1,82 @@
+[
+  {
+      "type": "function",
+      "function": {
+          "name": "add_event_to_calendar",
+          "description": "add an event to calendar",
+          "parameters": {
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "type": "string",
+                      "description": "The name of the event"
+                  },
+                  "start_time": {
+                      "type": "string",
+                      "description": "The start time of the event, format: YYYY-MM-DDTHH:MM:SS"
+                  },
+                  "end_time": {
+                      "type": "string",
+                      "description": "The end time of the event, format: YYYY-MM-DDTHH:MM:SS"
+                  }
+              },
+              "required": ["name", "start_time", "end_time"]
+          }
+      }
+  },
+  {
+      "type": "function",
+      "function": {
+          "name": "get_events_at_time",
+          "description": "get events from calendar by time range",
+          "parameters": {
+              "type": "object",
+              "properties": {
+                  "start_time": {
+                      "type": "string",
+                      "description": "The start time of the event, format it as: YYYY-MM-DDTHH:MM:SS"
+                  },
+                  "end_time": {
+                      "type": "string",
+                      "description": "The end time of the event, format it as: YYYY-MM-DDTHH:MM:SS"
+                  }
+              },
+              "required": ["start_time", "end_time"]
+          }
+      }
+  },
+  {
+    "type": "function",
+    "function": {
+        "name": "get_events_by_name",
+        "description": "get events from calendar by name",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The name of the event"
+                }
+            },
+            "required": ["name"]
+        }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "remove_event_from_calendar",
+      "description": "remove an event from calendar",
+      "parameters": {
+          "type": "object",
+          "properties": {
+              "id": {
+                  "type": "string",
+                  "description": "The ID of the event. If you don't know it, search for the event first"
+              }
+          },
+          "required": ["name"]
+      }
+    }
+  }
+]
